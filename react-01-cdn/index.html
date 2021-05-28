@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React With CDN</title>
+    <!-- React cdn -->
+    <script  src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <!-- React DOM cdn -->
+    <script  src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!-- Babel cdn -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="reactDiv">
+        <!-- here we will get data from react  -->
+    </div>
+
+
+    <script type="text/babel">
+        // we will write react here
+        // creating function and passing in below react component
+        function Test(){
+            const blah=()=>{
+                alert('function works in react component')
+            }
+            return <button onClick={blah}>Click</button>
+        }
+        // creating react component
+        class Hello extends React.Component{
+            render(){
+                // passing function here as html
+                return <div>Hello React Component <Test /> </div>
+            }
+        }
+
+        // connecting our html and react using react dom
+        // it takes two arguments first class as html and second id where we want to dispaly 
+        ReactDOM.render(<Hello />,document.getElementById('reactDiv'))
+        
+    </script>
+</body>
+
+</html>
