@@ -1,4 +1,0 @@
-created button 
-1.called function on button click using normal way and arrow function
-2.use variable and change data
-
