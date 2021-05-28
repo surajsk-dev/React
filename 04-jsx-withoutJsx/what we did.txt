@@ -1,3 +1,0 @@
-here we created two components
-1.with JSX
-2.without JSX
